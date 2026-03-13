@@ -18,7 +18,7 @@ for state in states:
 _render_navigation()
         
 st.markdown("## 📝 Blog Outline Generator")
-st.write("Welcome to the AI Blog Outline Generator! This tool uses OpenAI's ChatGPT to generate a blog outline based on your topic and target audience. Simply fill in the form and click 'Generate Outline' to get started.")
+st.write("Generate a structured blog outline tailored to your topic and audience using **OpenAI's** language models. Fill in the details below and click **'Generate Outline'** to get started.")
 st.markdown("---")
 
 # Invoke the generate_outline function to generate the outline
