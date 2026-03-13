@@ -9,18 +9,26 @@ Follow these steps to set up the project locally using uv for fast dependency ma
 
 #### 1\. Clone the Repository
 
-Open your terminal and run:**git clone cd**
+Open your terminal and run:
+```
+git clone <repo-link>
+```
 
 #### 2\. Configure Environment Variables
 
 Create a **.env** file in the root directory and add your OpenAI API key:**cp .env.example .env**
 
-Open **.env** and fill in your key:**OPENAI\_API\_KEY=your\_sk\_key\_here**
+Open **.env** and fill in your key:
+```
+OPENAI_API_KEY=your_api_key_here
+```
 
 #### 3\. Install Dependencies
 
-This project uses **uv** for efficient environment management. Sync the project dependencies by running:**uv sync**
-
+This project uses **uv** for efficient environment management. Sync the project dependencies by running:
+```
+uv sync
+```
 #### 4\. Run the Application
 
 Start the Streamlit server:**uv run streamlit run app.py**
