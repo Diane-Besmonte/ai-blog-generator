@@ -2,7 +2,7 @@ import streamlit as st
 from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.exc import SQLAlchemyError
-import datetime
+from datetime import datetime, timezone
 
 conn = st.connection("sql", type="sql")
 
@@ -13,7 +13,7 @@ class SavedBlog(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String)
     content = Column(String)
-    created_at = Column(DateTime, default=datetime.datetime.now)
+    created_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
     
     def __repr__(self):
         return f"<SavedBlog(id={self.id}, title={self.title}, content={self.content}, created_at={self.created_at})>"
